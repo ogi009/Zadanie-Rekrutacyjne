@@ -1,0 +1,211 @@
+.container {
+  width: 1000px;
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px -2px 16px 6px rgba(238, 241, 255, 1);
+  -moz-box-shadow: 2px -2px 16px 6px rgba(238, 241, 255, 1);
+  box-shadow: 2px -2px 16px 6px rgba(238, 241, 255, 1);
+}
+
+.content {
+  padding: 80px;
+}
+
+.people {
+  width: 400px;
+  padding: 20px 50px;
+  border-radius: 10px;
+  background: rgb(158, 118, 244);
+  background: linear-gradient(180deg, rgba(158, 118, 244, 1) 0%, rgba(114, 118, 247, 1) 100%);
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  -webkit-box-shadow: 1px 7px 5px 4px rgba(240, 240, 240, 1);
+  -moz-box-shadow: 1px 7px 5px 4px rgba(240, 240, 240, 1);
+  box-shadow: 1px 7px 5px 4px rgba(240, 240, 240, 1);
+  position: relative;
+}
+
+.cell {
+  width: 500px;
+  padding: 20px 50px;
+  margin: 20px 20px 50px 100px;
+  border-left: 10px solid #7276f7;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px -2px 16px 6px rgba(238, 241, 255, 1);
+  -moz-box-shadow: 2px -2px 16px 6px rgba(238, 241, 255, 1);
+  box-shadow: 2px -2px 16px 6px rgba(238, 241, 255, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 26px;
+  color: #4b597b;
+  position: relative;
+
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    i {
+      color: #f24e6a;
+      font-size: 26px;
+      text-shadow: 2px 2px 2px #f76c92;
+    }
+  }
+
+  .plus-small {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #37d3c2;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgb(118, 240, 173);
+    background: linear-gradient(180deg, rgba(118, 240, 173, 1) 0%, rgba(50, 232, 223, 1) 100%);
+    margin-top: 10px;
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+  }
+}
+
+.cell::before {
+  position: absolute;
+  bottom: 50%;
+  left: -160px;
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: #c7cbd7;
+}
+
+.cell::after {
+  position: absolute;
+  content: "And";
+  bottom: 32%;
+  left: -230px;
+  font-weight: normal;
+  font-size: 22px;
+  color: #b8becb;
+}
+
+.cell-flex {
+  flex-direction: column;
+  position: relative;
+}
+
+.cell-flex::after {
+  width: 50px;
+  height: 17px;
+  position: absolute;
+  bottom: 50%;
+}
+
+.plus {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #37d3c2;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgb(118, 240, 173);
+  background: linear-gradient(180deg, rgba(118, 240, 173, 1) 0%, rgba(50, 232, 223, 1) 100%);
+  margin: 0 50px 50px 170px;
+}
+
+button.plus {
+  border: 8px solid white;
+  -webkit-box-shadow: 0 3px 9px -2px rgba(50, 232, 223, 1);
+  -moz-box-shadow: 0 3px 9px -2px rgba(50, 232, 223, 1);
+  box-shadow: 0 3px 9px -2px rgba(50, 232, 223, 1);
+  cursor: pointer;
+}
+
+.popup {
+  width: 400px;
+  height: 200px;
+  border: 5px solid black;
+}
+
+.border {
+  border-left: 1px solid #c7cbd7;
+  margin-left: 200px;
+  padding: 50px 50px 40px 50px;
+}
+
+.cell:last-of-type {
+  margin-bottom: 0;
+}
+
+.cell-small {
+  display: flex;
+  text-align: left;
+  width: 350px;
+  justify-content: space-between;
+
+  p {
+    border: 1px solid #b8becb;
+    padding: 10px 160px 10px 10px;
+    margin-right: 20px;
+  }
+}
+
+.cell-smaller {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 250px;
+  border: 1px solid #b8becb;
+  padding: 10px;
+  margin-left: 57px;
+  margin-top: 10px;
+  position: relative;
+
+  p {
+    max-width: 200px;
+    overflow: hidden;
+  }
+}
+
+.cell-smaller:first-of-type {
+  margin-top: 30px;
+}
+
+.cell-smaller::before {
+  position: absolute;
+  bottom: 50%;
+  left: -57px;
+  content: "";
+  width: 57px;
+  height: 1px;
+  background-color: #c7cbd7;
+}
+
+.cell-smaller::after {
+  position: absolute;
+  content: "Or";
+  bottom: 30%;
+  left: -100px;
+  font-weight: normal;
+  font-size: 18px;
+  color: #b8becb;
+}
+
+.border-small {
+  border-left: 1px solid #c7cbd7;
+  margin-left: 65px;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 20px;
+  min-width: 300px;
+}
